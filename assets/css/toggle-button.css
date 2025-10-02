@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  display: block;
+  width: 150px;
+  aspect-ratio: 3/1;
+  border: none;
+  outline: none;
+  background-color: #817f7f;
+  border-radius: 30px;
+  position: relative;
+  left: 50%;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.btn::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+  content: "";
+  background-color: #fff;
+  width: 46px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+
+#toggle-input:checked + .btn {
+  background-color: green;
+}
+
+#toggle-input:checked + .btn::before {
+  left: calc(100% - 46px - 2px);
+}

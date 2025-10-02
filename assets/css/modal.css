@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #000;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.heading, .description {
+  margin-bottom: 20px;
+}
+
+.btn-first {
+  background-color: rgb(9, 141, 249);
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.btn-first:hover {
+  background-color: rgb(66, 182, 244);
+  cursor: pointer;
+}
+
+.overlay,
+.modal {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 40px;
+  left: 100px;
+  right: 100px;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-second {
+  display: block;
+  height: 100%;
+}
+
+.btn-third {
+  display: block;
+  cursor: pointer;
+}
+
+input:checked ~ .overlay,
+input:checked ~ .modal {
+  display: block;
+}
